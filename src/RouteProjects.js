@@ -24,8 +24,6 @@ class RouteProjects extends Component {
     }
   }
 
-  
-
   componentDidMount(){
     getProjects().then(res => {
       this.setState({projects:res.data});
