@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
 import { Link ,navigate } from '@reach/router'
 
-import { deleteProjects} from './API'
+import { deleteProjects, serverUrl} from './API'
 class  Project extends Component {
 
 	handleTrashClick = () => {
 		var {id} = this.props;
 
-		deleteProjects(id).then(res => navigate('/'))
+		deleteProjects(id).then(res => window.location.reload())
 
 
 	}
@@ -18,7 +18,7 @@ class  Project extends Component {
 
 	    return (
 	      <div className="card project">
-	        <img className="card-img-top" src="project.jpg" alt="Card image cap" />
+	        <img className="card-img-top" src={serverUrl+'project.jpg'} alt="Card image cap" />
 	        <div className="card-body">
 	          <h5 className="card-title">{name}</h5>
 	          <p className="card-text">{description}</p>

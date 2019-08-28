@@ -15,7 +15,7 @@ class RouteAddProject extends Component {
       type_id:formData.get('type-input')
     }
 
-    addProjects(data).then(res => navigate('/'))
+    addProjects(data).then(res => navigate('projects'))
 
   }
 

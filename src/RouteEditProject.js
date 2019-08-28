@@ -16,7 +16,6 @@ class RouteEditProject extends Component {
     var {id} = this.props;
     getProjectById(id).then(res => {
       this.setState({project:res.data});
-      console.log(res.data)
     })
   }
 
@@ -30,7 +29,7 @@ class RouteEditProject extends Component {
     }
 
     var {id} = this.state.project;
-    updateProjects(id,data).then(res => {navigate('/'); console.log(res)})
+    updateProjects(id,data).then(res => {navigate('projects');})
 
   }
 

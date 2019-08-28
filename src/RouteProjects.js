@@ -42,8 +42,6 @@ class RouteProjects extends Component {
             var projectProps = {
               ...project,
               key: project.id,
-              deleteProjects: this.deleteProjects,
-              setProjectToUpdate: this.setProjectToUpdate
             };
             return (<Project {...projectProps} />)
           })
